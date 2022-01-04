@@ -1,0 +1,384 @@
+@charset "utf-8";
+
+/* 共通
+------------------------------------------ */
+body {
+  margin: 0px;
+  font-family: "Helvetica Neue",
+                Arial,
+                "Hiragino Kaku Gothic ProN",
+                "Hiragino Sans",
+                Meiryo,
+                sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.item {
+  padding-top: 80px;
+  border-bottom: double;
+}
+
+section h1 {
+  margin-top: 50px;
+  font-size: 40px;
+  text-align: center;
+}
+
+/* header
+------------------------------------------ */
+header {
+  height: 60px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 200px;
+  box-shadow: 0 0 8px gray;
+  z-index: 1;
+}
+
+.logo {
+  width: 40px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.main-nav {
+  display: flex;
+}
+
+.main-nav li {
+  line-height: 60px;
+  padding: 0 14px;
+  display: block;
+  list-style: none;
+  font-size: 20px;
+  transition: all 1s;
+}
+
+.pcmenutoplist:hover {
+  background-color: #e2feff;
+}
+
+.pcmenuprofilelist:hover {
+  background-color: #e2feff;
+}
+
+.pcmenuportfoliolist:hover {
+  background-color: #e2feff;
+}
+
+.pcmenuskilllist:hover {
+  background-color: #e2feff;
+}
+
+.pcmenucontactlist:hover {
+  background-color: #e2feff;
+}
+
+.sp-menu {
+  display: none;
+}
+
+.overlay {
+  display: none;
+}
+
+/* main top
+------------------------------------------ */
+.top-wrapper {
+  width: 100%;
+  margin-top: 60px;
+  padding-top: 162px;
+  padding-bottom: 170px;
+  background-image: linear-gradient(#e2feff, #ffeef8)
+}
+
+.top-message {
+  text-align: center;
+}
+
+.top-message h1 {
+  font-size: 60px;
+}
+
+.top-message p {
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+.animate {
+  opacity: 0;
+  transition: opacity 2s, transform 2s;
+}
+
+.animate.appear {
+  opacity: 1;
+  transform: none;
+}
+
+/* main profile
+------------------------------------------ */
+.profile {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  margin: 0 auto;
+}
+
+.profile img {
+  display: block;
+  height: 150px;
+  width: 150px;
+}
+
+.profile p {
+  display: block;
+  padding-left: 30px;
+}
+
+/* main portfolio
+------------------------------------------ */
+.portfolio p {
+  padding-top: 30px;
+  text-align: center;
+}
+
+/* main skill
+------------------------------------------ */
+.skill h3 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.skill p {
+  text-align: left;
+  padding: 20px 30px 0 30px;
+}
+
+.mychart {
+  padding-top: 20px;
+  display: flex;
+}
+
+#myChart1 {
+  padding-right: 10px;
+}
+
+#myChart2 {
+  padding-left: 10px;
+}
+
+/* main contact
+------------------------------------------ */
+.contact p {
+  padding-top: 30px;
+  text-align: center;
+}
+
+input {
+  border-style: solid;
+  border-width: 0.1px;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+}
+
+textarea {
+  border-style: solid;
+  border-width: 0.1px;
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px 0 50px 10px;
+}
+
+label {
+  display: block;
+  font-size: 20px;
+}
+
+.button {
+  margin-top: 20px;
+  background-color: #e2feff;
+  transition: 1s; 
+}
+
+.button:hover {
+  background-color: #a7fcff;
+}
+
+.form-check {
+  margin-top: 20px;
+}
+
+.form-check-message {
+  font-size: 15px;
+}
+
+#check {
+  width: auto;
+}
+
+.must {
+  background-color: rgb(241, 36, 173, 0.8);
+  color: white;
+  padding: 2px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+/* main etc
+------------------------------------------ */
+.to-top {
+  text-align: center;
+  padding: 60px 0;
+}
+
+/* footer
+------------------------------------------ */
+footer {
+  padding: 30px 0;
+  text-align: center;
+  color: gray;
+  box-shadow: 0 0 8px gray;
+}
+
+/* スマホ向けレイアウト
+------------------------------------------ */
+@media(max-width: 670px) {
+  .pc-menu {
+    display: none;
+  }
+
+  .sp-menu {
+    display: block;
+  }
+ 
+  .sp-menu #open {
+    font-size: 45px;
+    margin: 10px;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .sp-menu #open.hide {
+    display: none;
+  }
+
+  .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    padding-top: 64px;
+    opacity: 0;
+    pointer-events: none;
+    transition: .6s;
+  }
+
+  .overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 2;
+  }
+
+  .overlay #close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 45px;
+    cursor: pointer;
+  }
+
+  .overlay ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .overlay li {
+    margin-top: 32px;
+    font-size: 28px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity .3s, transform .3s;
+  }
+
+  .overlay.show li {
+    opacity: 1;
+    transform: none;
+  }
+
+  .overlay.show li:nth-child(1) {
+    transition-delay: .1s;
+  }
+  .overlay.show li:nth-child(2) {
+    transition-delay: .2s;
+  }
+  .overlay.show li:nth-child(3) {
+    transition-delay: .3s;
+  }
+  .overlay.show li:nth-child(4) {
+    transition-delay: .4s;
+  }
+  .overlay.show li:nth-child(5) {
+    transition-delay: .5s;
+  }
+
+  header {
+    padding: 0;
+  }
+
+  .mychart {
+    position: relative;
+    width:200vw;
+    height:265vh;
+  }
+  
+  .top-message h1 {
+    font-size: 60px;
+  }
+
+  .top-message p {
+    font-size: 18px;
+  }
+
+  .profile {
+    margin: 0;
+    padding-top: 20px;
+  }
+
+  .profile img {
+    height: 110px;
+    width: 110px;
+  }
+
+  .profile p {
+    font-size: 10px;
+    padding-left: 0;
+    padding-top: 0;
+  }
+}
+
