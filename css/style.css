@@ -215,25 +215,13 @@ label {
 }
 
 .button {
-  margin-top: 20px;
+  margin-top: 40px;
   background-color: #e2feff;
-  transition: 1s; 
 }
 
 .button:hover {
   background-color: #a7fcff;
-}
-
-.form-check {
-  margin-top: 20px;
-}
-
-.form-check-message {
-  font-size: 15px;
-}
-
-#check {
-  width: auto;
+  transition: 1s; 
 }
 
 .must {
@@ -248,7 +236,7 @@ label {
 ------------------------------------------ */
 .to-top {
   text-align: center;
-  padding: 60px 0;
+  padding: 40px 0;
 }
 
 /* footer
@@ -258,6 +246,84 @@ footer {
   text-align: center;
   color: gray;
   box-shadow: 0 0 8px gray;
+}
+
+/* メールフォーム
+------------------------------------------ */
+.error-msg {
+  color: red;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+.thanks h1 {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.thanks-msg {
+  padding: 20px;
+  font-size: 18px;
+  text-align: center;
+  background-image: linear-gradient(#e2feff, #ffeef8)
+}
+
+.thanks-msg img {
+  margin-top: 20px;
+  height: 200px;
+  width: 200px;
+  border-radius: 25%;
+}
+
+.thanks-to-top {
+  margin-top: 30px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.confirm-msg {
+  margin: 0;
+  text-align:center;
+  font-size: 22px;
+  font-weight: bold;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  border-bottom: double;
+}
+
+.confirm-group {
+  border-bottom: double;
+}
+
+.confirm-group p {
+  padding: 10px 0;
+}
+
+.confirm-item {
+  font-weight: bold;
+}
+
+.confirm-button {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.confirm-button-back {
+  margin-right: 20px;
+  background-color: rgb(255, 81, 81);
+  cursor: pointer;
+  padding: 10px 40px;
+  border-radius: 5px;
+  color:black;
+}
+
+.confirm-button-submit {
+  margin-left: 20px;
+  background-color: rgb(158, 227, 255);
+  cursor: pointer;
+  padding: 10px 40px;
+  border-radius: 5px;
 }
 
 /* スマホ向けレイアウト
@@ -380,5 +446,24 @@ footer {
     padding-left: 0;
     padding-top: 0;
   }
-}
 
+.confirm-msg {
+  font-size: 24px;
+  }
+
+.confirm-group label {
+  font-size: 24px;
+  }
+
+.confirm-group p {
+  font-size: 24px;
+  }
+
+.confirm-button-back {
+  font-size: 24px;
+  }
+
+.confirm-button-submit {
+  font-size: 24px;
+  }
+}
