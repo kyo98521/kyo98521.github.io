@@ -158,7 +158,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
               <?php if ($error['name'] === 'blank'): ?>
                 <p class="error-msg">※お名前をご記入下さい</p>
               <?php endif; ?>
-            <input type="text" name="name" class="contact-text" value="<?php echo htmlspecialchars($post['name']); ?>" required>
+            <input type="text" id="name" class="contact-text" value="<?php echo htmlspecialchars($post['name']); ?>" required>
             <label for="email"><span class="must">必須</span>メールアドレス</label>
               <?php if ($error['email'] === 'blank'): ?>
                 <p class="error-msg">※メールアドレスをご記入下さい</p>
@@ -166,12 +166,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
               <?php if ($error['email'] === 'email'): ?>
                 <p class="error-msg">※メールアドレスを正しくご記入下さい</p>
               <?php endif; ?>
-            <input type="email" name="email" class="contact-email" value="<?php echo htmlspecialchars($post['email']); ?>" required>
+            <input type="email" id="email" class="contact-email" value="<?php echo htmlspecialchars($post['email']); ?>" required>
             <label for="message"><span class="must">必須</span>メッセージ</label>
               <?php if ($error['message'] === 'blank'): ?>
                 <p class="error-msg">※メッセージをご記入下さい</p>
               <?php endif; ?>
-            <textarea name="message" required><?php echo htmlspecialchars($post['message']); ?></textarea>
+            <textarea id="message" required><?php echo htmlspecialchars($post['message']); ?></textarea>
             <input type="submit" class="button" value="送信">
           </form>
         </div>
